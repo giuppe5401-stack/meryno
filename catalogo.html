@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home · Fiori Store</title>
+  <title>Catalogo · Fiori Store</title>
   <meta name="description" content="Negozio di fiori online - catalogo, bouquet, consegna, contatti." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,35 +24,29 @@
 </header>
 <main class="site-main container">
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Freschi, profumati, consegnati con cura.</h1>
-    <p>Scegli tra bouquet, fiori recisi, piante, accessori e pensieri profumati. Consegna in 24/48h.</p>
-    <div class="cta-row">
-      <a class="btn btn-fill" href="catalogo.html">Vai al catalogo</a>
-      <a class="btn" href="contatti.html">Richiedi un bouquet su misura</a>
+<header class="page-head"><h1>Catalogo</h1></header>
+<section class="catalog-layout">
+  <aside class="filters" aria-label="Filtri catalogo">
+    <h2>Filtri</h2>
+    <label>Categoria
+      <select id="f-category">
+        <option value="">Tutte</option>
+        <option value="bouquet">Bouquet</option>
+        <option value="fiori">Fiori recisi</option>
+        <option value="piante">Piante</option>
+        <option value="accessori">Accessori</option>
+      </select>
+    </label>
+    <label>Prezzo max
+      <input type="number" id="f-price" placeholder="€" />
+    </label>
+    <button class="btn" id="apply-filters">Applica</button>
+  </aside>
+  <section class="catalog-results">
+    <div id="product-list" class="product-grid" data-source="data/products.json">
+      <!-- Riempito da JS -->
     </div>
-  </div>
-  <div class="hero-art" aria-hidden="true">
-    <div class="flower-placeholder"></div>
-  </div>
-</section>
-
-<section class="home-cats">
-  <h2>Categorie</h2>
-  <div class="card-grid cats">
-    <a class="card" href="catalogo.html#bouquet"><h3>Bouquet</h3><p>Pronti o personalizzati</p></a>
-    <a class="card" href="catalogo.html#fiori"><h3>Fiori recisi</h3><p>Rosa, tulipano, peonia…</p></a>
-    <a class="card" href="catalogo.html#piante"><h3>Piante</h3><p>Verdi, fiorite, bonsai</p></a>
-    <a class="card" href="catalogo.html#accessori"><h3>Accessori</h3><p>Vasi, nastri, biglietti</p></a>
-  </div>
-</section>
-
-<section class="featured">
-  <h2>In evidenza</h2>
-  <div id="featured-products" class="product-grid" data-source="data/products.json">
-    <!-- Riempito da JS con prodotti di esempio -->
-  </div>
+  </section>
 </section>
 
 </main>

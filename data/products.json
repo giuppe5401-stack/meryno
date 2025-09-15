@@ -1,0 +1,45 @@
+[
+  {
+    "id": "bouquet-rosa",
+    "name": "Bouquet Rosa Delicato",
+    "short": "Rosa, peonie, lisianthus in tonalità rosate.",
+    "long": "Un bouquet romantico in palette rosa, confezionato con nastri neri per un contrasto elegante.",
+    "price": 39.9,
+    "category": "bouquet"
+  },
+  {
+    "id": "tulipani-misti",
+    "name": "Tulipani Misti",
+    "short": "12 tulipani assortiti, freschi di giornata.",
+    "price": 24.9,
+    "category": "fiori"
+  },
+  {
+    "id": "peonie",
+    "name": "Peonie Profumate",
+    "short": "3 steli premium, stagionali.",
+    "price": 19.9,
+    "category": "fiori"
+  },
+  {
+    "id": "pianta-bonsai",
+    "name": "Bonsai Decorativo",
+    "short": "Piccolo bonsai per interni, vaso incluso.",
+    "price": 29.0,
+    "category": "piante"
+  },
+  {
+    "id": "lavanda-sacchetti",
+    "name": "Sacchetti alla Lavanda",
+    "short": "Per cassetti e armadi, profumo naturale.",
+    "price": 7.9,
+    "category": "accessori"
+  },
+  {
+    "id": "incensi-misti",
+    "name": "Incensi Profumati",
+    "short": "Confezione mista (vaniglia, rosa, sandalo).",
+    "price": 9.5,
+    "category": "accessori"
+  }
+]

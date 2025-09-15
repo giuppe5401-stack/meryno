@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fde3ef;
+  color: #0e0e0e;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #f9d6e8;
+  text-align: center;
+  padding: 20px;
+}
+h1 {
+  margin: 0;
+}
+.hero, .vetrina, .contatti {
+  padding: 20px;
+}
+footer {
+  text-align: center;
+  background-color: #f9d6e8;
+  padding: 10px;
+  margin-top: 20px;
+}

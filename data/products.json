@@ -41,5 +41,13 @@
     "short": "Confezione mista (vaniglia, rosa, sandalo).",
     "price": 9.5,
     "category": "accessori"
+  },
+  {
+    "id": "mazzo-lavanda",
+    "name": "Mazzo di Lavanda Fresca",
+    "short": "Lavanda raccolta a mano, profumo intenso e naturale.",
+    "long": "Mazzo di lavanda appena raccolta, perfetto per decorare, profumare ambienti e come idea regalo. Elegante legatura con nastro nero.",
+    "price": 14.9,
+    "category": "fiori"
   }
 ]

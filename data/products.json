@@ -38,14 +38,6 @@
     "short": "Per cassetti e armadi, profumo naturale.",
     "price": 7.9,
     "category": "accessori",
-    "img": "assets/img/lavanda1.png"
-  },
-  {
-    "id": "incensi-misti",
-    "name": "Incensi Profumati",
-    "short": "Confezione mista (vaniglia, rosa, sandalo).",
-    "price": 9.5,
-    "category": "accessori",
     "img": "assets/img/lavanda6.png"
   },
   {

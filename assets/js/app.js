@@ -7,11 +7,10 @@
     const src = el.getAttribute('data-source');
     const res = await fetch(src);
     const items = await res.json();
-    // Featured: first 4
     const subset = el.id==='featured-products' ? items.slice(0,4) : items;
     el.innerHTML = subset.map(p => `
       <article class="product-card">
-        <div class="ph" role="img" aria-label="${p.name}"></div>
+        ${p.img ? `<img class="ph" src='${p.img}' alt='${p.name}'>` : `<div class='ph'></div>`}
         <div class="body">
           <h3>${p.name}</h3>
           <p class="muted">${p.short}</p>
@@ -51,6 +50,9 @@
     document.getElementById('p-name').textContent = p.name;
     document.getElementById('p-desc').textContent = p.long || p.short;
     document.getElementById('p-price').textContent = euro(p.price);
+    // replace gallery placeholder with image if available
+    const gallery = el.querySelector('.gallery');
+    gallery.innerHTML = p.img ? `<img src='${p.img}' alt='${p.name}' style='width:100%;border-radius:16px;'>` : `<div class='img ph'></div>`;
     document.getElementById('add-to-cart').onclick = ()=>{
       const qty = Number(document.getElementById('p-qty').value)||1;
       const cart = getCart();
@@ -84,7 +86,6 @@
     };
   }
 
-  // Filters (basic)
   async function initCatalogFilters(){
     const list = document.getElementById('product-list'); if(!list) return;
     const src = list.getAttribute('data-source');
@@ -92,7 +93,7 @@
     function draw(arr){
       list.innerHTML = arr.map(p=>`
         <article class="product-card">
-          <div class="ph" role="img" aria-label="${p.name}"></div>
+          ${p.img ? `<img class="ph" src='${p.img}' alt='${p.name}'>` : `<div class='ph'></div>`}
           <div class="body">
             <h3>${p.name}</h3>
             <p class="muted">${p.short}</p>
@@ -105,7 +106,8 @@
         </article>`).join('');
     }
     draw(items);
-    document.getElementById('apply-filters').onclick = ()=>{
+    const apply = document.getElementById('apply-filters');
+    if (apply) apply.onclick = ()=>{
       const cat = document.getElementById('f-category').value;
       const max = Number(document.getElementById('f-price').value||Infinity);
       const arr = items.filter(p => (!cat||p.category===cat) && p.price<=max);
@@ -117,8 +119,8 @@
     });
   }
 
-  // boot
   document.addEventListener('DOMContentLoaded', function(){
+    (function(){const el=document.querySelector('.hero-art .flower-placeholder'); if(el){ el.outerHTML = '<img src="assets/img/lavanda1.png" alt="Lavanda" style="width:100%;border-radius:16px;">'; }})();
     updateCartCount();
     loadProducts('#featured-products');
     hydrateProductDetail();
